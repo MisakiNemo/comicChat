@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('@/assets/font/ComicNeue-Regular.ttf');
+}
+
+
+#root{
+  font-size: 16px;
+  font-family: 'ComicNeue';
+}
+
+
+
+.ant-layout-sider{
+  background: transparent !important;
+}

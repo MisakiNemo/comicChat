@@ -1,0 +1,75 @@
+/* Ant Form */
+.ant-form {
+  @apply mt-5 h-full w-2/3 pl-5 pr-5;
+}
+
+/* Title */
+.Title {
+  @apply text-3xl font-bold text-white;
+  font-family: 'ComicNeue', sans-serif;
+}
+
+/* Change Text */
+.changeText {
+  @apply text-base;
+  font-family: 'ComicNeue', sans-serif;
+}
+
+/* Input Group Addon */
+.ant-input-group-addon {
+  @apply bg-transparent border-none text-white;
+}
+
+.ant-input-group-addon:focus {
+  @apply bg-pink-300 text-black outline-none shadow-none;
+}
+
+/* Inputs */
+.ant-input-outlined,
+.ant-input {
+  @apply border-2 border-white bg-transparent !important;
+  @apply focus:border-pink-300 !important;
+  @apply hover:border-pink-300 !important;
+  @apply bg-transparent h-10 !important;
+  @apply h-10 placeholder-white text-white text-xl leading-normal flex items-center mr-4;
+  font-family: 'ComicNeue', sans-serif;
+}
+
+.ant-input-outlined svg,
+.ant-input svg {
+  color: white;
+}
+
+/* Input Status Error */
+.ant-input-status-error {
+  @apply bg-pink-200;
+}
+
+/* Form Item Explain Error */
+.ant-form-item-explain-error {
+  @apply text-black  text-sm !important;
+  font-family: 'ComicNeue', sans-serif;
+}
+
+/* Button */
+.ant-btn {
+  @apply border-none text-pink-400 opacity-90 hover:bg-pink-200;
+  @apply hover:text-pink-600 hover:bg-gray-100 opacity-90 !important;
+  background-color: white; /* skyblue */
+  font-family: 'ComicNeue', sans-serif;
+}
+
+.ant-btn > div {
+  @apply hidden;
+}
+
+/* Register Button */
+.registerButton {
+  @apply min-w-[5rem];
+}
+
+/* Left Box */
+.leftBox {
+  @apply h-full w-1/2 bg-no-repeat bg-cover overflow-hidden;
+  background-image: url('@/assets/images/formbg.png');
+}
