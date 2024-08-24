@@ -1,0 +1,17 @@
+.chatItem.ant-menu-item{
+    height: 100px;
+}
+.chatMenu{
+    background: transparent !important;
+}
+
+.chatItem  {
+    background-color: transparent !important;
+
+    .ant-menu-title-content {
+        background: transparent !important;
+    }
+}
+.chatItem.ant-menu-item-selected {
+    background-color: red !important;
+}

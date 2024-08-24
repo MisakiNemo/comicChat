@@ -49,7 +49,6 @@ const RegisterPage = () => {
         }
     }
     return (
-        <LoginLayout>
             <div className="flex  justify-center items-start text-white w-full h-full rounded-md ">
                 <h1 className="leftBox ">
                     </h1>
@@ -71,8 +70,6 @@ const RegisterPage = () => {
                     </Form.Item>
                 </Form>
             </div>
-
-        </LoginLayout>
     )
 }
 

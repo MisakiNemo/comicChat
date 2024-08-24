@@ -49,9 +49,8 @@ const LoginPage = () => {
     };
 
     return (
-        <LoginLayout>
             <div className="flex  justify-center items-start text-white w-full h-full rounded-md">
-                <h1  className="leftBox "></h1>
+                <h1  className="leftBox"></h1>
                 <Form
                     name="login"
                     onFinish={login}
@@ -74,7 +73,7 @@ const LoginPage = () => {
                         <Input.Password placeholder="Password"/>
                     </Form.Item>
                         <Form.Item className="text-white mb-2">
-                           <p className="changeText">Have no account yet? <Link to="/register" className={"underline"}>Register</Link></p>
+                           <p className="changeText">Have no account yet? <Link to="/register" className={"underline "}>Register</Link></p>
                         </Form.Item>
                         <Form.Item className={"text-center"}>
                         <Button className={"registerButton"} htmlType="submit" loading={buttonLoading}>
@@ -83,7 +82,6 @@ const LoginPage = () => {
                     </Form.Item>
                 </Form>
             </div>
-        </LoginLayout>
     );
 };
 

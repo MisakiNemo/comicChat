@@ -1,25 +1,24 @@
 import {Layout} from "antd";
-import "@/components/layout/mainLayout/MaiLayout.scss"
+import "@/components/layout/mainLayout/MaiLayout.module.scss"
 import SideBar from "@/components/SideBar.tsx";
+import {Outlet} from "react-router-dom";
 
-interface Props {
-    children?: React.ReactNode;
-}
 
-const MainLayout = ( props: Props ) => {
+const MainLayout = ( ) => {
     return (
-        <Layout>
-            <Layout.Sider>
+        <Layout className={"h-screen w-screen"}>
+            <Layout.Sider width={50} >
                 <SideBar />
             </Layout.Sider>
-            <div className="main-content">
-                {props.children}
-            </div>
-</Layout>
-)
+            <Layout.Content >
+                <div className={"h-full"}>
+                    <Outlet />
+                </div>
+            </Layout.Content>
+        </Layout>
+    )
 
 }
-
 
 
 export default MainLayout;
