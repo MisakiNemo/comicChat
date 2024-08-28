@@ -10,7 +10,7 @@ const ChatPage=  ()=>{
                    </div>
                </Layout.Sider>
                    <Layout.Content>
-                       <div className={"h-full bg-pink-200"}>
+                       <div className={"h-full bg-red-500"}>
                           <ChatMain />
                        </div>
                    </Layout.Content>

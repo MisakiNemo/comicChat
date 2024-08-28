@@ -41,7 +41,7 @@ const SideBar = () => {
         setCurrent(e.key);
     }
     return (
-        <div className={"bg-pink-50 w-full h-full text-center "}>
+        <div className={"bg-pink-50 w-full h-full text-center overflow-hidden"}>
         <Avatar className={"m-auto w-10 h-10 mb-2 mt-2"} />
         <Menu className={"bg-transparent sideBarMenu"} selectedKeys={[current]} mode="inline">
             {items.map((item) => (

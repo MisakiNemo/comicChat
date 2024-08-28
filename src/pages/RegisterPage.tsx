@@ -63,7 +63,7 @@ const RegisterPage = () => {
                         <Input.Password type="password" placeholder="Password" className={"antInput"}/>
                     </Form.Item>
                     <Form.Item className={"text-white text-left mb-2"}>
-                        <p className="changeText">Already have an account? <Link to={"/login"} className={"underline"}>Login</Link></p>
+                        <p className="changeText">Already have an account? <Link to={"/login"} className={"underline hover:text-pink-300"}>Login</Link></p>
                     </Form.Item>
                     <Form.Item className={"text-center "}>
                         <Button  className={"registerButton"} htmlType="submit" loading={buttonLoading} >{buttonLoading ? "" : "Register"}</Button>

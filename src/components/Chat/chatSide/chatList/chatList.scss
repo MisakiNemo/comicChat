@@ -2,6 +2,7 @@
     height: 100px;
 }
 .chatMenu{
+    font-family: 'ComicNeue', sans-serif;
     background: transparent !important;
 }
 
@@ -14,4 +15,9 @@
 }
 .chatItem.ant-menu-item-selected {
     background-color: red !important;
+    color: white;
 }
+.chatItem.ant-menu-item-active {
+    border: none !important;
+}
+

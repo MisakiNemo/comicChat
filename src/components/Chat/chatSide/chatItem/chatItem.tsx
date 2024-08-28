@@ -1,4 +1,5 @@
 import {Avatar} from "antd";
+import "./chatItem.scss"
 
 const ChatItem = ({data}) => {
   return (
@@ -6,12 +7,12 @@ const ChatItem = ({data}) => {
         <div className="chat-item-avatar h-full w-auto flex items-center ml-3">
           <Avatar className={"h-12 w-12"} src={data.avatar} />
         </div>
-        <div className="chat-item-content">
-            <div className={"chat-item-header flex h-4 mb-2 "}>
+        <div className="chat-item-content w-3/5">
+            <div className={"chat-item-header h-4  flex items-center justify-between  w-full  "}>
                <div className={"chat-item-name"}>{data.userName}</div>
-                <div className={"chat-item-time ml-auto"}>{data.lastMessageTime}</div>
+                <div className={"chat-item-time"}>{data.lastMessageTime}</div>
             </div>
-          <p className="chat-item-message">{data.lastMessage}</p>
+          <div className="chat-item-message w-full">{data.lastMessage}</div>
         </div>
       </div>
   )

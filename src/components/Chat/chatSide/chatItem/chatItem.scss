@@ -1,0 +1,20 @@
+.chat-item-content{
+ margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  user-select: none;
+.chat-item-header{
+  line-height: 1.5rem;
+.chat-item-time {
+  text-align: right;
+}
+}
+  .chat-item-message{
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+  }
+}

@@ -1,0 +1,86 @@
+.message-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f5f5f5; /* 背景颜色 */
+  border: 1px solid #ddd; /* 边框颜色 */
+}
+
+.message-box-header {
+  padding: 10px;
+  background-color: #ffffff; /* 头部背景颜色 */
+  border-bottom: 1px solid #ddd; /* 头部下边框 */
+}
+
+.message-box-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message-box-item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.message-box-item.text-right {
+  justify-content: flex-end;
+}
+
+.message-box-item.text-left {
+  justify-content: flex-start;
+}
+
+.message-avatar {
+  margin: 0 10px;
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #e0e0e0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-bubble.text-right {
+  background-color: #d0f1ff; /* 右侧消息气泡颜色 */
+  align-items: flex-end;
+  border-top-right-radius: 0;
+}
+
+.message-bubble.text-left {
+  background-color: #ffffff; /* 左侧消息气泡颜色 */
+  align-items: flex-start;
+  border-top-left-radius: 0;
+}
+
+.message-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.message-bubble.text-right::before {
+  border-top-color: #d0f1ff;
+  right: 10px;
+  border-width: 10px 10px 0 0;
+}
+
+.message-bubble.text-left::before {
+  border-top-color: #ffffff;
+  left: 10px;
+  border-width: 10px 0 0 10px;
+}
+
+.message-header {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -73,7 +73,7 @@ const LoginPage = () => {
                         <Input.Password placeholder="Password"/>
                     </Form.Item>
                         <Form.Item className="text-white mb-2">
-                           <p className="changeText">Have no account yet? <Link to="/register" className={"underline "}>Register</Link></p>
+                           <p className="changeText">Have no account yet? <Link to="/register" className={"underline hover:text-pink-300 "}>Register</Link></p>
                         </Form.Item>
                         <Form.Item className={"text-center"}>
                         <Button className={"registerButton"} htmlType="submit" loading={buttonLoading}>

@@ -6,7 +6,8 @@ import {Outlet} from "react-router-dom";
 
 const MainLayout = ( ) => {
     return (
-        <Layout className={"h-screen w-screen"}>
+        <div className="MainLayout w-screen h-screen flex flex-col justify-between items-center bg-sky-400 ">
+        <Layout  className={"h-full w-full mainLayout"} >
             <Layout.Sider width={50} >
                 <SideBar />
             </Layout.Sider>
@@ -16,6 +17,7 @@ const MainLayout = ( ) => {
                 </div>
             </Layout.Content>
         </Layout>
+            </div>
     )
 
 }

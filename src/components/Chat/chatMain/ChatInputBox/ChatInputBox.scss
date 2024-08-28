@@ -1,0 +1,29 @@
+
+.chatInputBox {
+  border-top:  2px solid #ccc !important;
+  border-bottom: none !important;
+}
+
+.chatInput {
+  @apply h-32 !important;
+  border: none !important;
+  outline: none !important;
+  resize: none !important;
+  overflow: auto !important;
+  font-family: 'ComicNeue', sans-serif;
+  font-size: large;
+  color: white;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    background-color: #ccc !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+
+}
+.chatSendBtn {
+  @apply float-right;
+  margin-right: 2rem !important;
+  margin-bottom: 16rem !important;
+}

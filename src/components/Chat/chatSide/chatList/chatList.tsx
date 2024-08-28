@@ -28,7 +28,7 @@ const ChatList = () => {
         {
             id: 2,
             userName: "John Doe",
-            lastMessage: "Hey, what's up?",
+            lastMessage: "Hey, what's asdasdaskdninup?asdsdbajsbdsbfkasjnjckasnkjasbca",
             lastMessageTime: "10:05",
             unreadCount: 1,
             isGroup: false,
