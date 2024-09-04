@@ -1,6 +1,6 @@
 import ChatMessageBox from "@/components/Chat/chatMain/MeesageBox/ChatMessageBox.tsx";
 import ChatInputBox from "@/components/Chat/chatMain/ChatInputBox/ChatInputBox.tsx";
-import "./chatMain.scss";
+import "@/components/Chat/chatMain/ChatMain.css";
 
 const chatMain = () => {
   return (

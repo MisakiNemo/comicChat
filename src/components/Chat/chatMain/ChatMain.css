@@ -1,8 +1,8 @@
 .chatMainContainer{
   font-family: 'ComicNeue', sans-serif;
+}
 .chatMainBody {
   flex-grow: 1 !important;
-}
 }
 .chatSendBtn{
   margin: 0;
