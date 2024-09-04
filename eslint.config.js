@@ -24,6 +24,7 @@ const customTsFlatConfig = [
       ...tsEslintPlugin.configs.recommended.rules,
       // "@typescript-eslint/ban-types": 2,
       "@typescript-eslint/no-confusing-non-null-assertion": 2,
+      "@typescript-eslint/no-explicit": "off",
     },
     plugins: {
       // ts 语法特有的规则，例如泛型
