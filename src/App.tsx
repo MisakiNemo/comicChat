@@ -1,10 +1,8 @@
-import './App.css'
-import AppRoutes from './routes/index'
+import "./App.css";
+import AppRoutes from "./routes/index";
 
 function App() {
-    return (
-            <AppRoutes />
-    );
+  return <AppRoutes />;
 }
 
-export default App
+export default App;

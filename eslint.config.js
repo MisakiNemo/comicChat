@@ -1,28 +1,114 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
+import eslint from "@eslint/js";
 
-export default tseslint.config(
-  { ignores: ['dist'] },
+import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
+import tsEslintParser from "@typescript-eslint/parser";
+
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+
+import reactPlugin from "eslint-plugin-react";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
+
+import babelParser from "@babel/eslint-parser";
+
+import globals from "globals";
+
+const customTsFlatConfig = [
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    name: "typescript-eslint/base",
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      parser: tsEslintParser,
+      sourceType: "module",
+    },
+    files: ["**/*.{ts,tsx}"],
+    rules: {
+      ...tsEslintPlugin.configs.recommended.rules,
+      // "@typescript-eslint/ban-types": 2,
+      "@typescript-eslint/no-confusing-non-null-assertion": 2,
     },
     plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      // ts 语法特有的规则，例如泛型
+      "@typescript-eslint": tsEslintPlugin,
     },
   },
-)
+];
+
+const flatConfig = [
+  // 全局生效的规则
+  {
+    name: "global config",
+    languageOptions: {
+      globals: {
+        ...globals.es2022,
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        warnOnUnsupportedTypeScriptVersion: false,
+      },
+    },
+    rules: {
+      "no-dupe-class-members": 0,
+      "no-redeclare": 0,
+      "no-undef": 0,
+      "no-unused-vars": 0,
+    },
+  },
+  {
+    name: "react-eslint",
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    plugins: {
+      react: reactPlugin,
+      "react-hooks": reactHooksPlugin,
+    },
+    languageOptions: {
+      ...reactPlugin.configs.recommended.languageOptions,
+      // parserOptions: {
+      //   ecmaFeatures: {
+      //     jsx: true,
+      //   },
+      // },
+    },
+    rules: {
+      ...reactPlugin.configs.recommended.rules,
+      "react/react-in-jsx-scope": 0,
+    },
+    settings: {
+      react: {
+        // 需要显示安装 react
+        version: "detect",
+      },
+    },
+  },
+  {
+    name: "babel-parser",
+    languageOptions: {
+      parser: babelParser,
+      parserOptions: {
+        babelOptions: {
+          babelrc: false,
+          configFile: false,
+          browserslistConfigFile: false,
+          presets: ["@babel/preset-env"],
+        },
+        requireConfigFile: false,
+      },
+    },
+  },
+  {
+    ignores: ["dist"],
+  },
+];
+
+// export default tsEslint.config(
+//   eslint.configs.recommended,
+//   eslintPluginPrettierRecommended,
+//   ...flatConfig,
+//   ...tsEslint.configs.recommended,
+// );
+
+export default [
+  eslint.configs.recommended,
+  eslintPluginPrettierRecommended,
+  ...flatConfig,
+  ...customTsFlatConfig,
+];

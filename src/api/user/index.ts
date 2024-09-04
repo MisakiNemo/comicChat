@@ -1,23 +1,21 @@
 // import request from '@/utils/request';
-import Response from '@/api/types.ts';
-import { LoginResponse,LoginRequest } from './types';
+import Response from "@/api/types.ts";
+import { LoginResponse } from "./types";
 
-export async function loginService(data:LoginRequest): Promise<Response<LoginResponse>> {
-  // return request.post("api/user/login", data);
+export async function loginService(): Promise<Response<LoginResponse>> {
   //模拟接口返回数据
   return {
     code: 0,
     message: "success",
     data: {
-      token: "xxxxx"
-    }
-  }
+      token: "xxxxx",
+    },
+  };
 }
-export async function registerService(data:LoginRequest): Promise<Response<null>> {
-  // return request.post("api/user/register", data);
+export async function registerService(): Promise<Response<null>> {
   return {
     code: 0,
     message: "success",
-    data: null
-  }
+    data: null,
+  };
 }
