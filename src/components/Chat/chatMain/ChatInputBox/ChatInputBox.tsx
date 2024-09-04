@@ -1,23 +1,23 @@
 import { Button, message } from "antd";
 import "./ChatInputBox.scss";
-import { useRef, useState } from "react";
-import data from "@emoji-mart/data";
-import Picker from "@emoji-mart/react";
+import { useRef } from "react";
+// import data from "@emoji-mart/data";
+// import Picker from "@emoji-mart/react";
 
 const ChatInputBox = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const imageUploadRef = useRef<HTMLInputElement>(null);
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+  // const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   // const handleEmojiPickerToggle = () => {
   //   setShowEmojiPicker(!showEmojiPicker);
   // };
-  const handleShowEmojiPicker = (emoji: { native: string }) => {
-    if (contentRef.current) {
-      contentRef.current.insertAdjacentHTML("beforeend", emoji.native);
-      contentRef.current.focus();
-      setShowEmojiPicker(false);
-    }
-  };
+  // const handleShowEmojiPicker = (emoji: { native: string }) => {
+  //   if (contentRef.current) {
+  //     contentRef.current.insertAdjacentHTML("beforeend", emoji.native);
+  //     contentRef.current.focus();
+  //     setShowEmojiPicker(false);
+  //   }
+  // };
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.item(0);
@@ -60,23 +60,23 @@ const ChatInputBox = () => {
   return (
     <div className="chatInputBoxContainer h-auto w-full">
       <div className={"w-full bg-sky-400 h-10 flex items-center "}>
-        <div className="relative inline-block emojiBox ">
-          {/*<Button*/}
-          {/*  className={"bg-transparent h-full  text-xl"}*/}
-          {/*  onClick={handleEmojiPickerToggle}*/}
-          {/*>*/}
-          {/*  😊*/}
-          {/*</Button>*/}
-          {showEmojiPicker && (
-            <div className="absolute bottom-full left-0 transform -translate-y-2 z-50">
-              <Picker
-                data={data}
-                onEmojiSelect={handleShowEmojiPicker}
-                previewPosition={"none"}
-              />
-            </div>
-          )}
-        </div>
+        {/*<div className="relative inline-block emojiBox ">*/}
+        {/*  /!*<Button*!/*/}
+        {/*  /!*  className={"bg-transparent h-full  text-xl"}*!/*/}
+        {/*  /!*  onClick={handleEmojiPickerToggle}*!/*/}
+        {/*  /!*>*!/*/}
+        {/*  /!*  😊*!/*/}
+        {/*  /!*</Button>*!/*/}
+        {/*  {showEmojiPicker && (*/}
+        {/*    <div className="absolute bottom-full left-0 transform -translate-y-2 z-50">*/}
+        {/*      <Picker*/}
+        {/*        data={data}*/}
+        {/*        onEmojiSelect={handleShowEmojiPicker}*/}
+        {/*        previewPosition={"none"}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*  )}*/}
+        {/*</div>*/}
         <div className="relative inline-block">
           <input
             type="file"
