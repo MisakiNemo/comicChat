@@ -8,9 +8,9 @@ const ChatInputBox = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const imageUploadRef = useRef<HTMLInputElement>(null);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  const handleEmojiPickerToggle = () => {
-    setShowEmojiPicker(!showEmojiPicker);
-  };
+  // const handleEmojiPickerToggle = () => {
+  //   setShowEmojiPicker(!showEmojiPicker);
+  // };
   const handleShowEmojiPicker = (emoji: { native: string }) => {
     if (contentRef.current) {
       contentRef.current.insertAdjacentHTML("beforeend", emoji.native);
@@ -61,12 +61,12 @@ const ChatInputBox = () => {
     <div className="chatInputBoxContainer h-auto w-full">
       <div className={"w-full bg-sky-400 h-10 flex items-center "}>
         <div className="relative inline-block emojiBox ">
-          <Button
-            className={"bg-transparent h-full  text-xl"}
-            onClick={handleEmojiPickerToggle}
-          >
-            😊
-          </Button>
+          {/*<Button*/}
+          {/*  className={"bg-transparent h-full  text-xl"}*/}
+          {/*  onClick={handleEmojiPickerToggle}*/}
+          {/*>*/}
+          {/*  😊*/}
+          {/*</Button>*/}
           {showEmojiPicker && (
             <div className="absolute bottom-full left-0 transform -translate-y-2 z-50">
               <Picker

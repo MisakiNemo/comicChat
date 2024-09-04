@@ -3,10 +3,9 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import path from "path";
-import externals from "vite-plugin-externals";
 
 export default defineConfig({
-  plugins: [react(), (externals as any)({ "emoji-mart": "emojiMart" })],
+  plugins: [react()],
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],
@@ -22,8 +21,6 @@ export default defineConfig({
     open: true,
   },
   build: {
-    rollupOptions: {
-      external: ["emoji-mart"],
-    },
+    // rollupOptions: {},
   },
 });
