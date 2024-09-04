@@ -20,4 +20,9 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+  build: {
+    rollupOptions: {
+      external: ["emoji-mart"],
+    },
+  },
 });
