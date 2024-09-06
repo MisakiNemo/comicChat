@@ -21,7 +21,7 @@ export default function AppRoutes() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/video" element={<VideoPage />} />
       </Route>
-      <Route index element={<Navigate to="/chat" />} />
+      <Route index element={<Navigate to="/login" />} />
     </Routes>
   );
 }
